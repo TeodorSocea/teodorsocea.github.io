@@ -1,0 +1,270 @@
+/*Stilizare documet*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 10px;
+}
+a{
+  text-decoration: none;
+}
+body{
+    background-color: #35bc9c;
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size: cover;
+}
+ul{
+  list-style-type: none;
+  line-height: 70px;
+}
+
+/*Stilizare capsula continut*/
+.capsule{
+  grid-area: capsule;
+  -webkit-box-shadow: 0px 0px 145px 5px rgba(0,0,0,1);
+  -moz-box-shadow: 0px 0px 145px 5px rgba(0,0,0,1);
+  box-shadow: 0px 0px 145px 5px rgba(0,0,0,1);
+}
+.capsule{
+  display:grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-rows: 8vh 5vh 80vh 5vh;
+  grid-template-areas:
+  "sidebar header header"
+  "sidebar header header"
+  "sidebar main main"
+  "sidebar footer footer";
+}
+
+/*stilizare wrapper*/
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(auto, 10%) 1fr 1fr 2fr minmax(auto, 10%);
+  grid-template-rows: 2vh 8vh 85vh 5vh;
+  grid-template-areas:
+  ". . . . ."
+  ". capsule capsule capsule ."
+  ". capsule capsule capsule ."
+  ". capsule capsule capsule ." ;
+}
+
+/*Stilizare elemente header*/
+.header{
+  grid-area: header;
+  background-color:#214b51;
+  text-align: center;
+  position: relative;
+}
+.header{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+.Titlu{
+  grid-row: 1/2;
+  display: flex;
+  margin: auto;
+}
+.Titlu h1{
+  margin:auto;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 0px 0px black;
+}
+
+/*Stilizare elemente sidebar*/
+.sidebar{
+  grid-area: sidebar;
+  background-color: #214b51;
+  display: grid;
+  grid-template-columns: minmax(auto, 5%) 1fr minmax(auto,5%);
+  grid-template-rows: 5vh auto 5vh;
+}
+.sidenav{
+  grid-area: sidenav;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: white;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border: 3px solid black;
+}
+.sidenav a{
+  display:block;
+  text-align: center;
+  text-decoration: none;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  color: #35bc9c;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  text-shadow: 2px 0px 0px black;
+  font-size: 15px;
+}
+.sidenav a:hover{
+  background: black;
+  cursor: pointer;
+}
+.sidenav li{
+  list-style: none;
+}
+.sidenav ul{
+  width: 100%;
+}
+.tap{
+  background: black;
+}
+.nav-links ul{
+  display: none;
+}
+.tap ul{
+  display: block;
+  background:#26856e;
+}
+.sidenav a:hover{
+  background-color: black;
+}
+.nav-link a:hover{
+  background-color: grey;
+}
+.sidenav .sub-arrow:after{
+  content: '\203A';
+  float: right;
+  margin-right: 20px;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+}
+.sidenav li.tap .sub-arrow:after{
+  content: '\2039';
+
+}
+
+/*Stilizare elemente continut principal*/
+.main{
+  grid-area: main;
+  background: white;
+  -moz-background-size:cover;
+  -webkit-background-size:cover;
+  -o-background-size:cover;
+  background-size: cover;
+
+}
+.main{
+  display: grid;
+  grid-template-columns: 3% 1fr 3%;
+  grid-template-rows: 3% 1fr;
+  grid-template-areas:
+  ". . ."
+  ". box ."
+}
+.textbox{
+  grid-area: box;
+  display: inline-block;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.textbox img{
+  margin-left:50px;
+}
+.textbox h1{
+  font-size: 25px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+}
+.textbox h2{
+  font-size: 23px;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+.textbox p{
+  margin-left: 2%;
+  font-size: 20px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.textbox p.indented{
+  margin-left: 5%;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+table {
+    background-color: transparent;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+table.table {
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    border-spacing: 2px;
+    border-color: grey;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Stilizare elemente footer*/
+.footer{
+  grid-area: footer;
+  background-color: black;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+.footer-a{
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+}
+.footer-a a{
+  align-self: flex-start;
+  text-align: left;
+  margin:auto;
+  font-size: 20px;
+  color: White;
+}
+
+/*Media querries*/
+@media only screen and (max-width: 1366px) {
+  .wrapper{
+    grid-template-columns: minmax(auto, 30px) 1fr 1fr 2fr minmax(auto, 30px);
+  }
+  .Titlu h1{
+    font-size: 35px;
+  }
+}
